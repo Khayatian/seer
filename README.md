@@ -1,2 +1,2 @@
 # seer
-Synthetic Energy & Environmental Replicator
+Synthetic Energy & Environment Replicator
