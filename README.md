@@ -16,3 +16,6 @@ Seer has been tested on the following Python libraries:
 * Numpy 1.18.5
 * Scipy 1.4.1
 * TensorFlow 2.3.0
+
+# Contact
+Fazel Khayatian, Urban Energy Systems Laboratory, Empa https://www.empa.ch/web/khfa
