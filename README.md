@@ -1,6 +1,7 @@
 # seer
 Synthetic Energy & Environment Replicator
 
+### Description
 Seer is a conditional GAN that creates synthetic building performance profiles. Synthetic projections of building performance profiles are conditioned based on climate and operation constraints. The model requires three sets of inputs for training, i.e. "performance", "operation", and "weather":
 * The "performance" input should be a tensor of size [x,24,y], where x is the number of samples and y is the number of building perfromance features.
 * The "operation" input should be a one-hot-encoded array of size [x,z]: where z corresponds to the length of the Boolean operation constraints.
