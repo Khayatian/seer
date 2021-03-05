@@ -8,12 +8,9 @@ Seer is a conditional GAN that creates synthetic building performance profiles. 
 
 The data for training seer is obtained from "https://github.com/intelligent-environments-lab/CityLearn".
 
-### Discriminator:
-![Picture7](https://user-images.githubusercontent.com/27851066/110112203-b8520b00-7db1-11eb-8203-35613200e0fe.png)
+### Architecture
+![GAN_arch](https://user-images.githubusercontent.com/27851066/110121095-3ae0c780-7dbe-11eb-9196-4d55b7266ce0.png)
 
-
-### Generator:
-![Picture61](https://user-images.githubusercontent.com/27851066/110112225-c011af80-7db1-11eb-9430-1d790408ef45.png)
 
 ## Requirements
 Seer has been tested using the following Python libraries:
