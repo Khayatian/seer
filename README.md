@@ -11,8 +11,7 @@ The data for training seer is obtained from "https://github.com/intelligent-envi
 
 ### Architecture
 
-![GAN_arch](https://user-images.githubusercontent.com/27851066/118397689-8c76bf80-b655-11eb-9639-9ece5efc1ede.png)
-
+![GAN_arch](https://user-images.githubusercontent.com/27851066/118397748-d8c1ff80-b655-11eb-919a-27b2d888857c.png)
 
 
 ## Requirements
