@@ -7,7 +7,7 @@ Seer is a conditional GAN that creates synthetic building performance profiles. 
 * The "operation" input should be a Boolean array of size [x,z]: where z corresponds to the length of the one-hot-encoded operation constraints.
 * The "weather" input should have a size of [x,w], where w is the length of the weather constraints.
 
-The data for training seer is obtained from "https://github.com/intelligent-environments-lab/CityLearn". Post=processed data is available from "https://doi.org/10.5281/zenodo.4696060".
+The data for training seer is obtained from "https://github.com/intelligent-environments-lab/CityLearn". Training data and synthetic outputs are available from "https://doi.org/10.5281/zenodo.4696060".
 
 ### Architecture
 
