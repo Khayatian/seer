@@ -15,7 +15,7 @@ The data for training seer is obtained from "https://github.com/intelligent-envi
 
 
 ## Requirements
-Seer has been tested using the following Python libraries:
+Seer has been tested using Python 3.8 and the following libraries:
 * Numpy 1.18.5
 * Scipy 1.4.1
 * TensorFlow 2.3.0
