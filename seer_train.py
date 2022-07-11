@@ -162,8 +162,8 @@ for epoch in range(N_EPOCHS):
         flipped_idx = np.random.choice(np.arange(len(true_labels)), size=int(noise_prop * len(true_labels)))
         true_labels[flipped_idx] = 1 - true_labels[flipped_idx]
         d_loss_true = discriminator.train_on_batch([images, labels, weather_data], true_labels)
-        # Train generator on anomaly-infused data (Felix culpa)
-        anomaly = 1  # One anomalous sample is enough to induce felix culpa
+        # Train generator with poisoned labels (felix culpa)
+        anomaly = 1  # One sample with a poisoned label is enough to induce felix culpa
         labels = generate_real_labels(batch_idx, anomaly)
         noise_data = generate_noise(BATCH_SIZE, 101)
         random_labels = generate_random_labels(BATCH_SIZE)
