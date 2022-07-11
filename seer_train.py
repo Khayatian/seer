@@ -104,10 +104,10 @@ def generate_random_labels(n):
 
 
 # Load inputs
-mat = scipy.io.loadmat('build9.mat')  # All inputs are stored in a Matlab data file named "build1.mat"
+mat = scipy.io.loadmat('build9.mat')  # All inputs for building number [#] are stored in a Matlab data file named "build[#].mat"
 x_performance = mat['performance']  # In the file "build1.mat" , demand profiles are named "performance"
-y_operation = mat['operation']  # In the file "build1.mat" , operation labels are named "performance"
-z_weather = mat['weather']  # In the file "build1.mat" , weather profiles are named "performance"
+y_operation = mat['operation']  # In the file "build1.mat" , operation labels are named "operation"
+z_weather = mat['weather']  # In the file "build1.mat" , weather profiles are named "weather"
 n_train_samples = x_performance.shape[0]
 x_performance = x_performance.reshape(n_train_samples, x_performance.shape[1], x_performance.shape[2], 1)  # reshaping
 
