@@ -1,9 +1,9 @@
 from __future__ import print_function, division
-from tensorflow.keras.layers import Input, Dense, Flatten, Dropout, Reshape, Concatenate, RepeatVector, Permute
-from tensorflow.keras.layers import Activation, Conv2D
-from tensorflow.keras.layers import ELU
-from tensorflow.keras.models import Model
-from tensorflow.keras import regularizers
+from keras.layers import Input, Dense, Flatten, Dropout, Reshape, Concatenate, RepeatVector, Permute
+from keras.layers import Activation, Conv2D
+from keras.layers import ELU
+from keras.models import Model
+from keras import regularizers
 from keras.optimizers import Adam
 import scipy.io
 import numpy as np
@@ -104,7 +104,7 @@ def generate_random_labels(n):
 
 
 # Load inputs
-mat = scipy.io.loadmat('build9.mat')  # All inputs for building number [#] are stored in a Matlab data file named "build[#].mat"
+mat = scipy.io.loadmat('inputs/build9.mat')  # All inputs for building number [#] are stored in a Matlab data file named "build[#].mat"
 x_performance = mat['performance']  # In the file "build1.mat" , demand profiles are named "performance"
 y_operation = mat['operation']  # In the file "build1.mat" , operation labels are named "operation"
 z_weather = mat['weather']  # In the file "build1.mat" , weather profiles are named "weather"
@@ -113,7 +113,7 @@ x_performance = x_performance.reshape(n_train_samples, x_performance.shape[1], x
 
 
 # Training properties
-N_EPOCHS = 5000  # Between 5000 - 10000
+N_EPOCHS = 10  # Between 5000 - 10000
 BATCH_SIZE = n_train_samples  # Any value between 60 or 100 is a good batch size but depends on the GPU memory
 num_batches = int(x_performance.shape[0] / BATCH_SIZE)  # Calculating the number of batches
 epoch = 0
@@ -212,8 +212,12 @@ for epoch in range(N_EPOCHS):
 
 
 # Save GAN and training performance
-save_path = 'C:/Users/'
-name_of_file = 'build9'
+save_path = "results"
+name_of_file = "build9"
+isExist = os.path.exists(save_path)
+if not isExist:
+    os.makedirs(save_path)
+
 save_path = os.path.join(save_path, name_of_file+".mat")
 scipy.io.savemat(save_path, {'cGAN_perf': perform_list})
 generator.save('build9.h5')
